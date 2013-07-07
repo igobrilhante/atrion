@@ -66,7 +66,6 @@ public class Node implements Serializable {
     public String toString() {
         return "Node{" +
                 "id=" + id +
-                ", location=" + location +
                 '}';
     }
 }

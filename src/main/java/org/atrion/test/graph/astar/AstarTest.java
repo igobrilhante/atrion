@@ -1,6 +1,7 @@
 package org.atrion.test.graph.astar;
 
 import org.atrion.astar.AStar;
+import org.atrion.astar.Path;
 import org.atrion.graph.Graph;
 import org.atrion.graph.Node;
 import org.atrion.graph.io.GraphReader;
@@ -29,11 +30,15 @@ public class AstarTest {
         System.out.println(graph.edgeCount());
 
 
-        Node start = graph.getNode(4);
+        Node start = graph.getNode(6);
         System.out.println("Start "+start);
         Node destination = graph.getNode(8);
         System.out.println("Destination "+destination);
 
-        AStar.astart(graph,start,destination);
+        AStar astar = new AStar();
+        astar.distance(graph, start, destination);
+
+        Path path = astar.getPath();
+        System.out.println("Path "+path.getTotalCost()+ ": "+path.getReversedPath());
     }
 }

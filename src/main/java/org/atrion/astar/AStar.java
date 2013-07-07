@@ -14,57 +14,41 @@ import java.util.*;
  * To change this template use File | Settings | File Templates.
  */
 
-
-//function A*(start,goal)
-//        closedset := the empty set    // The set of nodes already evaluated.
-//        openset := {start}    // The set of tentative nodes to be evaluated, initially containing the start node
-//        came_from := the empty map    // The map of navigated nodes.
-//
-//        g_score[start] := 0    // Cost from start along best known path.
-//        // Estimated total cost from start to goal through y.
-//        f_score[start] := g_score[start] + heuristic_cost_estimate(start, goal)
-//
-//        while openset is not empty
-//        current := the node in openset having the lowest f_score[] value
-//        if current = goal
-//        return reconstruct_path(came_from, goal)
-//
-//        remove current from openset
-//        add current to closedset
-//        for each neighbor in neighbor_nodes(current)
-//        tentative_g_score := g_score[current] + dist_between(current,neighbor)
-//        if neighbor in closedset and tentative_g_score >= g_score[neighbor]
-//        continue
-//
-//        if neighbor not in openset or tentative_g_score < g_score[neighbor]
-//        came_from[neighbor] := current
-//        g_score[neighbor] := tentative_g_score
-//        f_score[neighbor] := g_score[neighbor] + heuristic_cost_estimate(neighbor, goal)
-//        if neighbor not in openset
-//        add neighbor to openset
-//
-//        return failure
-//
-//        function reconstruct_path(came_from, current_node)
-//        if current_node in came_from
-//        p := reconstruct_path(came_from, came_from[current_node])
-//        return (p + current_node)
-//        else
-//        return current_node
 public class AStar {
 
+    private Path path;
 
 
-    public static void compute(Graph graph){
+    public  void compute(Graph graph){
 
     }
 
-    public static void astart(Graph graph,Node start, Node destination){
+    public Path getPath(){
+        return this.path;
+    }
+
+    private  void constructPath(Map<Node,Node> cameFrom, Path path, Node current){
+         if(cameFrom.containsKey(current)){
+
+             path.getNodes().add(current);
+
+             Node next = cameFrom.get(current);
+             constructPath(cameFrom,path, next);
+
+         }
+        else{
+             path.getNodes().add(current);
+         }
+    }
+
+    public void distance(Graph graph,Node start, Node destination){
 
 
         ArrayList<Node> closedSet = new ArrayList<Node>();
         PriorityQueue<Entity> openSet = new PriorityQueue<Entity>();
         Map<Node,Entity> entities = new HashMap<Node, Entity>();
+        Map<Node,Node> cameFrom = new HashMap<Node, Node>();
+        this.path = new Path();
 
         Entity eStart = new Entity(start);
         eStart.gScore = 0f;
@@ -74,11 +58,12 @@ public class AStar {
         entities.put(start,eStart);
 
         while(!openSet.isEmpty()){
-            System.out.println(openSet);
+//            System.out.println(openSet);
             Entity current = openSet.poll();
-            System.out.println("Current "+current.node.getId());
+//            System.out.println("Current "+current.node.getId());
             if(current.node.equals(destination)){
-                System.out.println("Total cost "+current.gScore);
+                this.path.setTotalCost(current.gScore);
+                constructPath(cameFrom,path,destination);
                 return ;
             }
 
@@ -87,7 +72,7 @@ public class AStar {
 
             if(currentNeighbors!=null){
                 for(Node neighbor : currentNeighbors){
-                    System.out.println("\t\tNeighbor "+neighbor.getId());
+//                    System.out.println("\t\tNeighbor "+neighbor.getId());
                     float tentative_g_score =  current.gScore + graph.getEdge(current.node,neighbor).getCost();
                     Entity eNeighbor = new Entity(neighbor);
 
@@ -102,7 +87,9 @@ public class AStar {
 
                     // Include in the queue
                     if(!openSet.contains(eNeighbor)){
-                        // cameFrom
+
+                        cameFrom.put(neighbor,current.node);  // Where the neighbor node  came from (current node)
+
                         eNeighbor.gScore = tentative_g_score;
                         eNeighbor.fScore = eNeighbor.gScore + heuristic(eNeighbor.node,destination);
 
@@ -124,7 +111,13 @@ public class AStar {
 
     }
 
-    private static float heuristic(Node n1, Node n2){
+    /**
+     * Heuristic used in the Algorithm A*. Here we use Euclidean Distance
+     * @param n1
+     * @param n2
+     * @return
+     */
+    private  float heuristic(Node n1, Node n2){
         Location l1 = n1.getLocation();
         Location l2 = n2.getLocation();
         float d = (float)Math.sqrt( Math.pow(l1.getLongitude()-l2.getLongitude(),2)+Math.pow(l1.getLatitude()-l2.getLatitude(),2));
@@ -132,7 +125,7 @@ public class AStar {
         return  d;
     }
 
-    private static class Entity implements Comparable<Entity>{
+    private  class Entity implements Comparable<Entity>{
 
         private final Node node;
         private Node parent;
