@@ -24,6 +24,14 @@ public class Path {
         this.totalCost = -1f;
     }
 
+    public Node getStart(){
+        return this.nodes.get(nodes.size()-1);
+    }
+
+    public Node getDestination(){
+        return this.nodes.get(0);
+    }
+
     public List<Node> getNodes() {
         return nodes;
     }

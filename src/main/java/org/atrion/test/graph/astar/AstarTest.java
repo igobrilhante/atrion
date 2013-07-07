@@ -30,7 +30,7 @@ public class AstarTest {
         System.out.println(graph.edgeCount());
 
 
-        Node start = graph.getNode(6);
+        Node start = graph.getNode(1);
         System.out.println("Start "+start);
         Node destination = graph.getNode(8);
         System.out.println("Destination "+destination);
