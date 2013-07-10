@@ -13,17 +13,36 @@
     <file path="/road-network-edges.txt" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373125399811" ignored="false" />
     <file path="/Node.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373148081015" ignored="false" />
     <file path="/Neighbor.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373136827113" ignored="false" />
-    <file path="/Edge.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373141810838" ignored="false" />
+    <file path="/Edge.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373213855193" ignored="false" />
     <file path="/RoadNetwork.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373137215632" ignored="false" />
-    <file path="/fragment.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373137553273" ignored="false" />
-    <file path="/GraphReader.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373148564266" ignored="false" />
-    <file path="/Graph.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373150513679" ignored="false" />
+    <file path="/fragment.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373207688311" ignored="false" />
+    <file path="/GraphReader.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373210571303" ignored="false" />
+    <file path="/Graph.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373406269913" ignored="false" />
     <file path="/GraphIOTest.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373150440211" ignored="false" />
     <file path="/GraphWriter.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373142664267" ignored="false" />
-    <file path="/AStar.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373206403511" ignored="false" />
+    <file path="/AStar.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373210615855" ignored="false" />
     <file path="/AstarTest.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373206721957" ignored="false" />
     <file path="/Location.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373148379917" ignored="false" />
     <file path="/Path.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373206985695" ignored="false" />
+    <file path="/RTreeTest.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373208641660" ignored="false" />
+    <file path="/Point.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373210469956" ignored="false" />
+    <file path="/Line.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373210179454" ignored="false" />
+    <file path="/PerpendicularEuclideanDistance.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373212823828" ignored="false" />
+    <file path="/PerpendicularEuclideanDistanceTest.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373212694699" ignored="false" />
+    <file path="/EuclideanDistance.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373212331444" ignored="false" />
+    <file path="/ClosestEdgeQuery.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373213897373" ignored="false" />
+    <file path="/ClosestEdgeQueryTest.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373213772714" ignored="false" />
+    <file path="/ClosestNodeQuery.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373282887831" ignored="false" />
+    <file path="/GridIndex.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373406787761" ignored="false" />
+    <file path="/Atrion.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373409062063" ignored="false" />
+    <file path="/AtrionQuery.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373409038378" ignored="false" />
+    <file path="/AtrionResult.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373407156300" ignored="false" />
+    <file path="/AtrionRecommendation.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373407533514" ignored="false" />
+    <file path="/PointNodeDistance.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373407816585" ignored="false" />
+    <file path="/PointPointDistance.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373407979797" ignored="false" />
+    <file path="/CandidatePoint.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373408087126" ignored="false" />
+    <file path="/CandidateQuery.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373408270884" ignored="false" />
+    <file path="/AtrionEntry.java" changelist="b34dd274-8417-4629-b52a-7d7ac712d499" time="1373408947905" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +57,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -73,7 +92,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -83,10 +102,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Node.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/graph/Node.java">
+      <file leaf-file-name="GridIndex.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/index/GridIndex.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="18" selection-start="1260" selection-end="1260" vertical-scroll-proportion="0.0">
+            <state line="23" column="8" selection-start="538" selection-end="538" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -94,11 +113,84 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Location.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/location/Location.java">
+      <file leaf-file-name="Atrion.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/algorithm/Atrion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="18" selection-start="673" selection-end="673" vertical-scroll-proportion="0.0">
+            <state line="67" column="106" selection-start="2280" selection-end="2280" vertical-scroll-proportion="0.63222414">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#769#782#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CandidatePoint.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/algorithm/CandidatePoint.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="35" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CandidateQuery.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/query/CandidateQuery.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="20" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PointPointDistance.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/distance/PointPointDistance.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="19" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PointNodeDistance.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/distance/PointNodeDistance.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="17" selection-start="356" selection-end="356" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AtrionQuery.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/algorithm/AtrionQuery.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="23" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AtrionEntry.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/algorithm/AtrionEntry.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="104" selection-start="576" selection-end="576" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AtrionRecommendation.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/algorithm/AtrionRecommendation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="40" selection-start="833" selection-end="833" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#644#657#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -106,91 +198,9 @@
       <file leaf-file-name="Graph.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/graph/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="83" selection-start="1655" selection-end="1655" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GraphReader.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/graph/io/GraphReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="8" selection-start="2794" selection-end="2794" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GraphIOTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/test/GraphIOTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="58" selection-start="502" selection-end="502" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AStar.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/astar/AStar.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="42" selection-start="1508" selection-end="1508" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#936#942#0" expanded="true" />
-                <element signature="e#1003#1011#0" expanded="true" />
-                <element signature="e#1062#1076#0" expanded="true" />
-                <element signature="e#1125#1137#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Path.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/astar/Path.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="33" selection-start="702" selection-end="702" vertical-scroll-proportion="0.7068404">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="road-network-edges.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/road-network-edges.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="1" selection-start="1" selection-end="1" vertical-scroll-proportion="0.0">
+            <state line="30" column="29" selection-start="801" selection-end="801" vertical-scroll-proportion="0.0">
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AstarTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/test/graph/astar/AstarTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="70" selection-start="928" selection-end="928" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="road-network-nodes.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/road-network-nodes.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="9" selection-start="79" selection-end="79" vertical-scroll-proportion="-3.8888888">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-            <state />
           </provider>
         </entry>
       </file>
@@ -204,22 +214,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/atrion/graph/Neighbor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/atrion/graph/Neighbors.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/atrion/graph/RoadNetwork.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/atrion/test/GraphGeoToolTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/atrion/graph/io/GraphWriter.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/atrion/graph/Edge.java" />
-        <option value="$PROJECT_DIR$/src/main/java/location/Location.java" />
-        <option value="$PROJECT_DIR$/road-network-edges.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/org/atrion/graph/io/GraphReader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/atrion/location/Location.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/atrion/test/GraphIOTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/atrion/distance/ClosestEdgeQuery.java" />
+        <option value="$PROJECT_DIR$/road-network-nodes.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/org/atrion/test/query/ClosestEdgeQueryTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/atrion/query/ClosestNodeQuery.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/atrion/graph/Graph.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/atrion/graph/Node.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/atrion/astar/AStar.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/atrion/test/graph/astar/AstarTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/atrion/astar/Path.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/atrion/index/GridIndex.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/atrion/algorithm/AtrionResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/atrion/algorithm/AtrionRecommendation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/atrion/distance/PointNodeDistance.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/atrion/distance/PointPointDistance.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/atrion/algorithm/CandidatePoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/atrion/query/CandidateQuery.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/atrion/algorithm/AtrionEntry.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/atrion/algorithm/AtrionQuery.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/atrion/algorithm/Atrion.java" />
       </list>
     </option>
   </component>
@@ -256,8 +266,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -265,6 +273,10 @@
               <option name="myItemId" value="atrion" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -337,8 +349,34 @@
               <option name="myItemId" value="atrion" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="atrion" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atrion" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atrion" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="query" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -368,7 +406,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="location" />
+              <option name="myItemId" value="index" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -428,12 +466,74 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="astar" />
+              <option name="myItemId" value="geometry" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atrion" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atrion" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atrion" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="distance" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atrion" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atrion" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atrion" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algorithm" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -445,19 +545,19 @@
     <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/vecmath-1.3.2.jar!/" />
-    <property name="project.structure.side.proportion" value="0.18997669" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/lib/slf4j-api-1.6.3.jar!/" />
+    <property name="project.structure.side.proportion" value="0.1899767" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.AstarTest">
+  <component name="RunManager" selected="Application.ClosestEdgeQueryTest">
     <configuration default="false" name="GraphGeoToolTest" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -487,7 +587,7 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="org.atrion.test.GraphIOTest" />
+      <option name="MAIN_CLASS_NAME" value="org.atrion.test.graph.io.GraphIOTest" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -510,6 +610,50 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="org.atrion.test.graph.astar.AstarTest" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="atrion" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="PerpendicularEuclideanDistanceTest" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="org.atrion.test.distance.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="org.atrion.test.distance.PerpendicularEuclideanDistanceTest" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="atrion" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ClosestEdgeQueryTest" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="org.atrion.test.query.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="org.atrion.test.query.ClosestEdgeQueryTest" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -562,6 +706,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -588,19 +745,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -662,17 +806,21 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="4">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Maven.Atrion" />
       <item index="1" class="java.lang.String" itemvalue="Application.GraphGeoToolTest" />
       <item index="2" class="java.lang.String" itemvalue="Application.GraphIOTest" />
       <item index="3" class="java.lang.String" itemvalue="Application.AstarTest" />
+      <item index="4" class="java.lang.String" itemvalue="Application.PerpendicularEuclideanDistanceTest" />
+      <item index="5" class="java.lang.String" itemvalue="Application.ClosestEdgeQueryTest" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Application.AstarTest" />
-        <item index="1" class="java.lang.String" itemvalue="Application.GraphIOTest" />
-        <item index="2" class="java.lang.String" itemvalue="Application.GraphGeoToolTest" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.ClosestEdgeQueryTest" />
+        <item index="1" class="java.lang.String" itemvalue="Application.PerpendicularEuclideanDistanceTest" />
+        <item index="2" class="java.lang.String" itemvalue="Application.AstarTest" />
+        <item index="3" class="java.lang.String" itemvalue="Application.GraphIOTest" />
+        <item index="4" class="java.lang.String" itemvalue="Application.GraphGeoToolTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -708,13 +856,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1218" height="778" extended-state="6" />
+    <frame x="0" y="22" width="1218" height="778" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -724,17 +871,18 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22461368" sideWeight="0.51823705" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.45592704" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42235494" sideWeight="0.8844985" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11550152" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32826748" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32826748" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -798,64 +946,30 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/fortaleza_road_network.csv">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/geometry/LineSegment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="87" selection-start="0" selection-end="87" vertical-scroll-proportion="0.0">
+        <state line="61" column="0" selection-start="1415" selection-end="1415" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/graph/Neighbors.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/query/ClosestEdgeQuery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="226" selection-end="226" vertical-scroll-proportion="0.0">
+        <state line="24" column="39" selection-start="679" selection-end="679" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/test/GraphGeoToolTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/astar/AStar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="82" selection-start="2944" selection-end="3010" vertical-scroll-proportion="0.499002">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1668#1680#0" expanded="true" />
-            <element signature="e#6963#6969#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/graph/io/GraphWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="8" selection-start="633" selection-end="633" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/graph/Edge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="28" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fortaleza_road_network.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="28" selection-start="155" selection-end="155" vertical-scroll-proportion="0.016483517">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/road-network-edges.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="1" selection-start="1" selection-end="1" vertical-scroll-proportion="0.0">
+        <state line="132" column="29" selection-start="4013" selection-end="4013" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/road-network-nodes.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="9" selection-start="79" selection-end="79" vertical-scroll-proportion="-3.8888888">
+        <state line="7" column="9" selection-start="79" selection-end="79" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -863,25 +977,16 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/location/Location.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/test/query/ClosestEdgeQueryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="18" selection-start="673" selection-end="673" vertical-scroll-proportion="0.0">
+        <state line="30" column="0" selection-start="819" selection-end="819" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/graph/io/GraphReader.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/query/ClosestNodeQuery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="8" selection-start="2794" selection-end="2794" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/test/GraphIOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="58" selection-start="502" selection-end="502" vertical-scroll-proportion="0.0">
+        <state line="37" column="21" selection-start="1002" selection-end="1002" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -890,49 +995,82 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/graph/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="83" selection-start="1655" selection-end="1655" vertical-scroll-proportion="0.0">
+        <state line="30" column="29" selection-start="801" selection-end="801" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/index/GridIndex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="8" selection-start="538" selection-end="538" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/graph/Node.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/distance/PointNodeDistance.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="18" selection-start="1260" selection-end="1260" vertical-scroll-proportion="0.0">
+        <state line="16" column="17" selection-start="356" selection-end="356" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/astar/AStar.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/distance/PointPointDistance.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="42" selection-start="1508" selection-end="1508" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#936#942#0" expanded="true" />
-            <element signature="e#1003#1011#0" expanded="true" />
-            <element signature="e#1062#1076#0" expanded="true" />
-            <element signature="e#1125#1137#0" expanded="true" />
-          </folding>
+        <state line="15" column="19" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/test/graph/astar/AstarTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/query/CandidateQuery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="70" selection-start="928" selection-end="928" vertical-scroll-proportion="0.0">
+        <state line="19" column="20" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/astar/Path.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/algorithm/CandidatePoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="33" selection-start="702" selection-end="702" vertical-scroll-proportion="0.7068404">
+        <state line="11" column="35" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/algorithm/AtrionRecommendation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="40" selection-start="833" selection-end="833" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#644#657#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/algorithm/AtrionEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="104" selection-start="576" selection-end="576" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/algorithm/AtrionQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="23" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/atrion/algorithm/Atrion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="106" selection-start="2280" selection-end="2280" vertical-scroll-proportion="0.63222414">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#769#782#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -994,8 +1132,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.18997669" />
-                <option value="0.5" />
+                <option value="0.1899767" />
               </list>
             </option>
           </splitter-proportions>
@@ -1018,7 +1155,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.18997669" />
+                <option value="0.1899767" />
               </list>
             </option>
           </splitter-proportions>

@@ -1,9 +1,9 @@
 package org.atrion.graph.io;
 
+import org.atrion.geometry.Point;
 import org.atrion.graph.Edge;
 import org.atrion.graph.Graph;
 import org.atrion.graph.Node;
-import org.atrion.location.Location;
 
 import java.io.*;
 
@@ -82,15 +82,13 @@ public class GraphReader {
             String[] l = line.split(",");
 
             Integer nodeId  = Integer.parseInt(l[0]);
-            Double latitude = Double.parseDouble(l[1]);
-            Double longitude= Double.parseDouble(l[2]);
+            Double x = Double.parseDouble(l[1]);
+            Double y= Double.parseDouble(l[2]);
 
             Node node = new Node(nodeId);
-            Location location = new Location();
-            location.setLatitude(latitude);
-            location.setLongitude(longitude);
+            Point point = new Point(x,y);
 
-            node.setLocation(location);
+            node.setPoint(point);
             graph.addNode(node);
         }
         br.close();

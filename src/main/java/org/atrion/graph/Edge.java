@@ -1,5 +1,7 @@
 package org.atrion.graph;
 
+import org.atrion.geometry.LineSegment;
+
 import java.io.Serializable;
 
 /**
@@ -15,17 +17,27 @@ public class Edge implements Serializable {
     private final Node target;
     private final String label;
     private final float cost;
+    private final LineSegment lineSegment;
 
 
     public Edge(Node source, Node target,float cost) {
-        this.source = source;
-        this.target = target;
-        this.cost   = cost;
-        this.label  = source+"-"+target;
+        this.source      = source;
+        this.target      = target;
+        this.cost        = cost;
+        this.label       = source.getId()+"-"+target.getId();
+        this.lineSegment = new LineSegment(source.getPoint(),target.getPoint());
     }
 
     public Node getSource() {
         return source;
+    }
+
+    public String getLabel() {
+        return label;
+    }
+
+    public LineSegment getLineSegment() {
+        return lineSegment;
     }
 
     public Node getTarget() {
@@ -51,5 +63,12 @@ public class Edge implements Serializable {
     @Override
     public int hashCode() {
         return label.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return "Edge{" +
+                "label='" + label + '\'' +
+                '}';
     }
 }

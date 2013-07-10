@@ -1,8 +1,8 @@
 package org.atrion.astar;
 
+import org.atrion.geometry.Point;
 import org.atrion.graph.Graph;
 import org.atrion.graph.Node;
-import org.atrion.location.Location;
 
 import java.util.*;
 
@@ -118,9 +118,9 @@ public class AStar {
      * @return
      */
     private  float heuristic(Node n1, Node n2){
-        Location l1 = n1.getLocation();
-        Location l2 = n2.getLocation();
-        float d = (float)Math.sqrt( Math.pow(l1.getLongitude()-l2.getLongitude(),2)+Math.pow(l1.getLatitude()-l2.getLatitude(),2));
+        Point l1 = n1.getPoint();
+        Point l2 = n2.getPoint();
+        float d = (float)Math.sqrt( Math.pow(l1.getX()-l2.getX(),2)+Math.pow(l1.getY()-l2.getY(),2));
 
         return  d;
     }

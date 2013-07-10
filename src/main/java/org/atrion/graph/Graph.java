@@ -19,12 +19,21 @@ public class Graph implements Serializable {
     private List<Edge> edges;
     private HashMap<Node,List<Node>> adjacentList;
     private HashMap<String,Edge> edgeMap;
+    private String name;
 
     public Graph(){
         nodes = new HashMap<Integer,Node>();
         edges = new ArrayList<Edge>();
         adjacentList = new HashMap<Node, List<Node>>();
         edgeMap = new HashMap<String, Edge>();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Node getNode(Integer i){

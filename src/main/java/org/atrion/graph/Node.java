@@ -1,6 +1,6 @@
 package org.atrion.graph;
 
-import org.atrion.location.Location;
+import org.atrion.geometry.Point;
 
 import java.io.Serializable;
 
@@ -13,7 +13,7 @@ import java.io.Serializable;
  */
 public class Node implements Serializable {
     private final int id;
-    private Location location;
+    private Point point;
     private Neighbors neighbors;
 
 
@@ -29,12 +29,12 @@ public class Node implements Serializable {
         return neighbors.get(node);
     }
 
-    public Location getLocation() {
-        return location;
+    public Point getPoint() {
+        return point;
     }
 
-    public void setLocation(Location location) {
-        this.location = location;
+    public void setPoint(Point point) {
+        this.point = point;
     }
 
     public void setNeighbors(Neighbors neighbors) {
