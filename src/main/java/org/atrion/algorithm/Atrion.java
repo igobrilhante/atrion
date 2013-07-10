@@ -4,6 +4,7 @@ import org.atrion.distance.PointNodeDistance;
 import org.atrion.distance.PointPointDistance;
 import org.atrion.geometry.Point;
 import org.atrion.graph.Node;
+import org.atrion.query.CandidateQuery;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -30,7 +31,7 @@ public class Atrion {
         /*
             Find cadidate points
          */
-           Collection<CandidatePoint> candidatePoints = null;
+           Collection<CandidatePoint> candidatePoints = CandidateQuery.query(query);
         /*
             Search for close objects
          */
@@ -55,8 +56,8 @@ public class Atrion {
                      }
                  }
 
-                 double objectCost  = distance / CAR_SPEED;
-                 double walkingCost = candidatePoint.getDistance() / WALKING_SPEED;
+                 double objectCost  = distance                      / CAR_SPEED;
+                 double walkingCost = candidatePoint.getDistance()  / WALKING_SPEED;
 
                  if(objectCost > walkingCost){
                      AtrionEntry entry = new AtrionEntry(1,candidatePoint,objectCost,walkingCost,objectCost+walkingCost);
@@ -65,11 +66,11 @@ public class Atrion {
                  }
              }
 
-             AtrionRecommendation finalSolution = new AtrionRecommendation(tentativeSolution,query.getK());
          }
 
+        AtrionRecommendation finalSolution = new AtrionRecommendation(tentativeSolution,query.getK());
 
-        return null;
+        return finalSolution;
 
     }
 }

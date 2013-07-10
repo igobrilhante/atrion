@@ -1,8 +1,11 @@
 package org.atrion.query;
 
+import org.atrion.algorithm.AtrionQuery;
 import org.atrion.algorithm.CandidatePoint;
 import org.atrion.geometry.Point;
+import org.atrion.graph.Edge;
 import org.atrion.graph.Graph;
+import org.atrion.graph.Node;
 
 import java.util.Collection;
 
@@ -15,7 +18,15 @@ import java.util.Collection;
  */
 public class CandidateQuery {
 
-    public static Collection<CandidatePoint> query(Graph graph, Point point){
+    public static Collection<CandidatePoint> query(Graph graph,AtrionQuery point){
+
+        double distance = point.getWalkingDistance();
+
+        Collection<Node> range = RangeNodeQuery.query(graph.getNodes(),point);
+        Edge             edge  = ClosestEdgeQuery.query(graph.getEdges(),point.getPoint());
+
+
+
 
         return null;
     }
