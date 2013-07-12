@@ -30,10 +30,11 @@ public class AstarTest {
         System.out.println(graph.edgeCount());
 
 
-        Node start = graph.getNode(1);
+        Node start = graph.getNode(2);
         System.out.println("Start "+start);
-        Node destination = graph.getNode(8);
+        Node destination = graph.getNode(5);
         System.out.println("Destination "+destination);
+        System.out.println(graph.getEdge(start,destination).getCost());
 
         AStar astar = new AStar();
         astar.distance(graph, start, destination);

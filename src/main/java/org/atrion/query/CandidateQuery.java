@@ -23,26 +23,37 @@ import java.util.Set;
  */
 public class CandidateQuery {
 
-    public static Collection<CandidatePoint> query(Graph graph,PathCollection pathCollection,AtrionQuery queryPoint){
+    public static Collection<CandidatePoint> query(Graph graph,PathCollection walkingPaths,PathCollection roadPaths,AtrionQuery queryPoint){
 
         EuclideanDistance ed = new EuclideanDistance();
 
 
         /*
-            Find closest edge
+            Find closest edge for the query point
          */
-        Map.Entry<Edge,Point> entry = ClosestEdgeQuery.query(graph.getEdges(), queryPoint.getPoint());
-        Edge closestEdge = entry.getKey();
-        Point projectedPoint = entry.getValue();
+        Map.Entry<Edge,Point> entry         = ClosestEdgeQuery.query(graph.getEdges(), queryPoint.getPoint());
+        Edge closestEdge                    = entry.getKey();
+        Point projectedPoint                = entry.getValue();
 
-        System.out.println("Closest edge: "+closestEdge);
-        System.out.println("Projected point: "+projectedPoint);
+        /*
+            Find closest edge for destination point
+         */
+        Map.Entry<Edge,Point> destinationEntry  = ClosestEdgeQuery.query(graph.getEdges(), queryPoint.getDestinationPoint());
+        Edge closestDestinationEdge             = entry.getKey();
+        Point projectedDestinationPoint         = entry.getValue();
+
+//        System.out.println("Closest edge: "+closestEdge);
+//        System.out.println("Projected point: "+projectedPoint);
 
         Node source = closestEdge.getSource();
         Node target = closestEdge.getTarget();
 
+        Node destinationSource = closestDestinationEdge.getSource();
+
         double sourceDistance = ed.invoke(source.getPoint(), projectedPoint);
         double targetDistance = ed.invoke(target.getPoint(), projectedPoint);
+        
+        double projectedDestinationDistance = ed.invoke(projectedDestinationPoint,destinationSource.getPoint());
 
         Double distance = 0.0;
 
@@ -51,20 +62,46 @@ public class CandidateQuery {
          */
         Set<CandidatePoint> candidatePoints = new HashSet<CandidatePoint>();
 
+        // If projected point is not a Node
         if(!projectedPoint.equals(source.getPoint()) && !projectedPoint.equals(target.getPoint())){
-            CandidatePoint defaultPoint = new CandidatePoint(0.0,entry);
-            candidatePoints.add(defaultPoint);
+
+            // Destination Distance
+            Double dd = roadPaths.getCost(target,destinationSource);
+
+            if(distance !=null) {
+                dd += ed.invoke(projectedPoint,target.getPoint());
+                dd += projectedDestinationDistance;
+                CandidatePoint defaultPoint = new CandidatePoint(0.0,entry);
+                defaultPoint.setDestinationDistance(dd);
+                candidatePoints.add(defaultPoint);
+
+            }
         }
 
         if( sourceDistance <= queryPoint.getWalkingDistance()){
-            System.out.println("Source Distance "+source +" is "+sourceDistance);
-            CandidatePoint candidatePoint = new CandidatePoint(sourceDistance,source);
-            candidatePoints.add(candidatePoint);
+//            System.out.println("Source Distance "+source +" is "+sourceDistance);
+
+            // Destination Distance
+            Double dd = roadPaths.getCost(source,destinationSource);
+            if(dd != null){
+                dd += projectedDestinationDistance;
+                CandidatePoint candidatePoint = new CandidatePoint(sourceDistance,source);
+                candidatePoint.setDestinationDistance(dd);
+                candidatePoints.add(candidatePoint);
+            }
+
         }
         if( targetDistance <= queryPoint.getWalkingDistance()){
-            System.out.println("Target Distance "+target +" is "+targetDistance);
-            CandidatePoint candidatePoint = new CandidatePoint(targetDistance,target);
-            candidatePoints.add(candidatePoint);
+//            System.out.println("Target Distance "+target +" is "+targetDistance);
+
+            // Destination Distance
+            Double dd = roadPaths.getCost(target,destinationSource);
+            if(dd !=null){
+                dd += projectedDestinationDistance;
+                CandidatePoint candidatePoint = new CandidatePoint(targetDistance,target);
+                candidatePoints.add(candidatePoint);
+            }
+
 
         }
 
@@ -79,12 +116,21 @@ public class CandidateQuery {
                     Source to Node
                  */
                 if(node != source){
-                    distance = pathCollection.getCost(source,node);
+                    distance = walkingPaths.getCost(source,node);
                     if(distance != null){
                         if(sourceDistance + distance <= queryPoint.getWalkingDistance()){
-                            CandidatePoint candidatePoint = new CandidatePoint(sourceDistance + distance,node);
-                            candidatePoints.add(candidatePoint);
-                            continue;
+
+                            // Destination Distance
+                            Double dd = roadPaths.getCost(node,destinationSource);
+                            if(dd != null){
+                                dd += projectedDestinationDistance;
+                                CandidatePoint candidatePoint = new CandidatePoint(sourceDistance + distance,node);
+                                candidatePoints.add(candidatePoint);
+                                candidatePoint.setDestinationDistance(dd);
+                                continue;
+                            }
+
+
                         }
                     }
                 }
@@ -93,11 +139,17 @@ public class CandidateQuery {
                     Target to Node
                  */
                 if(node != target){
-                    distance = pathCollection.getCost(target,node);
-                    if(distance !=null){System.out.println("Source Distance "+distance);
+                    distance = walkingPaths.getCost(target,node);
+                    if(distance !=null){
                         if(targetDistance + distance <= queryPoint.getWalkingDistance()){
-                            CandidatePoint candidatePoint = new CandidatePoint(targetDistance + distance,node);
-                            candidatePoints.add(candidatePoint);
+                            // Destination Distance
+                            Double dd = roadPaths.getCost(node,destinationSource);
+                            if(dd != null){
+                                dd += projectedDestinationDistance;
+                                CandidatePoint candidatePoint = new CandidatePoint(targetDistance + distance,node);
+                                candidatePoints.add(candidatePoint);
+                                candidatePoint.setDestinationDistance(dd);
+                            }
 
                         }
                     }

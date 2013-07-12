@@ -55,6 +55,6 @@ public class RoadPathCollectionTest {
 
         pathCollection = PathCollection.read("path-collection.ser");
         System.out.println("Paths " + pathCollection.getMap().size());
-        System.out.println(pathCollection.getPath(graph.getNode(2),graph.getNode(4)));
+        System.out.println(pathCollection.getPath(graph.getNode(2),graph.getNode(5)));
     }
 }

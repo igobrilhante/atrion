@@ -12,6 +12,7 @@ import org.atrion.geometry.Point;
 public class AtrionQuery {
 
     private final Point point;
+    private Point destinationPoint;
     private final int   walkingDistance;
 
     public AtrionQuery(Point point, int walkingDistance) {
@@ -25,6 +26,14 @@ public class AtrionQuery {
 
     public int getWalkingDistance() {
         return walkingDistance;
+    }
+
+    public Point getDestinationPoint() {
+        return destinationPoint;
+    }
+
+    public void setDestinationPoint(Point destinationPoint) {
+        this.destinationPoint = destinationPoint;
     }
 }
 

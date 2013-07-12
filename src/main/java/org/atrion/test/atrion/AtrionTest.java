@@ -50,7 +50,7 @@ public class AtrionTest {
 
         PathCollection roadPaths = PathCollection.read("path-collection.ser");
 
-        AtrionQuery queryPoint = new AtrionQuery(new Point(4.0,1.0),1);
+        AtrionQuery queryPoint = new AtrionQuery(new Point(3.0,2.0),1);
 
         Atrion atrion = new Atrion();
 
@@ -58,7 +58,7 @@ public class AtrionTest {
         taxis.add(new Point(2,0));
         taxis.add(new Point(1,1));
 
-        AtrionRecommendation ar = atrion.execute(queryPoint,taxis,roadGraph,walkingGraph,roadPaths,walkingPaths,1);
+        AtrionRecommendation ar = atrion.execute(queryPoint,taxis,roadGraph,walkingGraph,roadPaths,walkingPaths,3);
 
         System.out.println("Result "+ar);
     }

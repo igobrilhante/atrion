@@ -98,9 +98,13 @@ public class AStar {
                     }
                     // It is the queue, update its properties
                     else{
+                        cameFrom.put(neighbor,current.node);  // Where the neighbor node  came from (current node)
+                        openSet.remove(eNeighbor);
                         Entity e = entities.get(eNeighbor.node);
                         e.gScore = tentative_g_score;
                         e.fScore = eNeighbor.gScore + heuristic(e.node,destination);
+                        openSet.add(e);
+
 
                     }
 

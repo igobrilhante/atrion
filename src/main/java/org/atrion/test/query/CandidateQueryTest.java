@@ -39,9 +39,20 @@ public class CandidateQueryTest {
 
         PathCollection pathCollection = PathCollection.read("walking-path-collection.ser");
 
-        AtrionQuery queryPoint = new AtrionQuery(new Point(3.5,1.0),3);
+         /*
+                Load Road Graph from CSV
+         */
+        String roadNodeFile = "road-network-nodes.txt";
+        String roadEdgeFile = "road-network-edges.txt";
 
-        Collection<CandidatePoint> candidatePointCollection = CandidateQuery.query(graph,pathCollection,queryPoint);
+        Graph roadGraph = GraphReader.readFromCSV(roadNodeFile, roadEdgeFile);
+
+        PathCollection roadPaths = PathCollection.read("path-collection.ser");
+
+        AtrionQuery queryPoint = new AtrionQuery(new Point(1,1.0),3);
+        queryPoint.setDestinationPoint(new Point(4,1));
+
+        Collection<CandidatePoint> candidatePointCollection = CandidateQuery.query(graph,pathCollection,roadPaths,queryPoint);
 
         System.out.println("Result:\n"+candidatePointCollection);
     }

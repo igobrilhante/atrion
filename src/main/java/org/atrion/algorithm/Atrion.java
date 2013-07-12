@@ -25,8 +25,8 @@ import java.util.Map;
  */
 public class Atrion {
 
-    private static final double CAR_SPEED     = 20.0;
-    private static final double WALKING_SPEED = 0.0002;
+    private static final double CAR_SPEED     = 3.0;
+    private static final double WALKING_SPEED = 1;
 
     public AtrionRecommendation execute(AtrionQuery query,Collection<Point> objects,Graph roadGraph, Graph walkingGraph,PathCollection roadPaths, PathCollection walkingPaths,final int k) throws Exception {
 
@@ -37,7 +37,8 @@ public class Atrion {
         /*
             Find cadidate points
          */
-           Collection<CandidatePoint> candidatePoints = CandidateQuery.query(walkingGraph,walkingPaths,query);
+           Collection<CandidatePoint> candidatePoints = CandidateQuery.query(walkingGraph,walkingPaths,roadPaths,query);
+        System.out.println("Candidate Points "+candidatePoints);
         /*
             Search for close objects
          */

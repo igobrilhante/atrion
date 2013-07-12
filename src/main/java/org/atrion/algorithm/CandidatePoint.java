@@ -11,6 +11,7 @@ public class CandidatePoint {
 
     private final double distance;
     private final Object object;
+    private double destinationDistance;
 
     public CandidatePoint(double distance, Object object) {
         this.distance = distance;
@@ -25,11 +26,20 @@ public class CandidatePoint {
         return object;
     }
 
+    public double getDestinationDistance() {
+        return destinationDistance;
+    }
+
+    public void setDestinationDistance(double destinationDistance) {
+        this.destinationDistance = destinationDistance;
+    }
+
     @Override
     public String toString() {
         return "CandidatePoint{" +
                 "distance=" + distance +
                 ", object=" + object +
+                ", destinationDistance=" + destinationDistance +
                 '}';
     }
 
