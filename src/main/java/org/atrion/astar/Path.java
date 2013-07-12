@@ -3,6 +3,7 @@ package org.atrion.astar;
 import org.atrion.graph.Edge;
 import org.atrion.graph.Node;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,23 +14,27 @@ import java.util.List;
  * Time: 10:46
  * To change this template use File | Settings | File Templates.
  */
-public class Path {
+public class Path implements Serializable {
     private List<Node> nodes;
-    private float totalCost;
+    private double totalCost;
     private List<Edge> edges;
+    private final Node source;
+    private final Node target;
 
-    public Path(){
+    public Path(Node source, Node target){
         this.nodes = new ArrayList<Node>();
         this.edges = new ArrayList<Edge>();
-        this.totalCost = -1f;
+        this.source = source;
+        this.target = target;
+        this.totalCost = -1d;
     }
 
     public Node getStart(){
-        return this.nodes.get(nodes.size()-1);
+        return this.source;
     }
 
     public Node getDestination(){
-        return this.nodes.get(0);
+        return this.target;
     }
 
     public List<Node> getNodes() {
@@ -40,11 +45,11 @@ public class Path {
         this.nodes = nodes;
     }
 
-    public float getTotalCost() {
+    public double getTotalCost() {
         return totalCost;
     }
 
-    public void setTotalCost(float totalCost) {
+    public void setTotalCost(double totalCost) {
         this.totalCost = totalCost;
     }
 
@@ -57,7 +62,7 @@ public class Path {
     }
 
     public Path getReversedPath(){
-        Path reversedPath = new Path();
+        Path reversedPath = new Path(source,target);
 
         for(int i=nodes.size()-1;i>=0;i--){
             reversedPath.getNodes().add(this.nodes.get(i));

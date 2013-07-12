@@ -7,6 +7,7 @@ import org.atrion.graph.Graph;
 import org.atrion.graph.io.GraphReader;
 
 import java.io.IOException;
+import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
@@ -31,7 +32,7 @@ public class ClosestEdgeQueryTest {
 
         Point queryPoint = new Point(2,0.5);
 
-        Edge edge = ClosestEdgeQuery.query(graph.getEdges(),queryPoint);
+        Map.Entry<Edge,Point> edge = ClosestEdgeQuery.query(graph.getEdges(),queryPoint);
         System.out.println("Result "+edge);
 
     }

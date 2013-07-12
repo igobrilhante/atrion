@@ -48,7 +48,7 @@ public class AStar {
         PriorityQueue<Entity> openSet = new PriorityQueue<Entity>();
         Map<Node,Entity> entities = new HashMap<Node, Entity>();
         Map<Node,Node> cameFrom = new HashMap<Node, Node>();
-        this.path = new Path();
+        this.path = new Path(start,destination);
 
         Entity eStart = new Entity(start);
         eStart.gScore = 0f;

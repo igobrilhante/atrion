@@ -13,12 +13,10 @@ public class AtrionQuery {
 
     private final Point point;
     private final int   walkingDistance;
-    private final int k;
 
-    public AtrionQuery(Point point, int walkingDistance,int k) {
+    public AtrionQuery(Point point, int walkingDistance) {
         this.point              = point;
         this.walkingDistance    = walkingDistance;
-        this.k                  = k;
     }
 
     public Point getPoint() {
@@ -27,10 +25,6 @@ public class AtrionQuery {
 
     public int getWalkingDistance() {
         return walkingDistance;
-    }
-
-    public int getK() {
-        return k;
     }
 }
 

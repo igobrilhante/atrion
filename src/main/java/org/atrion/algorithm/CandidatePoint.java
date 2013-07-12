@@ -24,4 +24,29 @@ public class CandidatePoint {
     public Object getObject() {
         return object;
     }
+
+    @Override
+    public String toString() {
+        return "CandidatePoint{" +
+                "distance=" + distance +
+                ", object=" + object +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        CandidatePoint that = (CandidatePoint) o;
+
+        if (!object.equals(that.object)) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return object.hashCode();
+    }
 }

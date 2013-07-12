@@ -4,7 +4,9 @@ import org.atrion.distance.PerpendicularEuclideanDistance;
 import org.atrion.geometry.Point;
 import org.atrion.graph.Edge;
 
+import java.util.AbstractMap;
 import java.util.Collection;
+import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,21 +17,25 @@ import java.util.Collection;
  */
 public class ClosestEdgeQuery {
 
-    public static Edge query(Collection<Edge> edges, Point point){
+    public static Map.Entry<Edge,Point> query(Collection<Edge> edges, Point point){
 
         double maxDistance = Double.POSITIVE_INFINITY;
         Edge result = null;
+        Point projectedPoint = null;
         PerpendicularEuclideanDistance ped = new PerpendicularEuclideanDistance();
 
         for(Edge edge : edges){
             double d = ped.invoke(point,edge.getLineSegment());
             if(d < maxDistance){
-                maxDistance = d;
-                result      = edge;
+                maxDistance     = d;
+                result          = edge;
+                projectedPoint  = ped.getProjectedPoint();
             }
         }
-        System.out.println("Distance "+maxDistance);
-        return result;
+
+
+        return new AbstractMap.SimpleImmutableEntry<Edge, Point>(result,projectedPoint) {
+        };
     }
 
 }

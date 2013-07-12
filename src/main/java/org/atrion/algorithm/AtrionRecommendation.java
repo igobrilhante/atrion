@@ -18,15 +18,18 @@ public class AtrionRecommendation {
 
     public AtrionRecommendation(List<AtrionEntry> list,int k) {
         this.k = k;
-        this.list = recommendation(k);
+        this.list = recommendation(list,k);
     }
 
-    public List<AtrionEntry> recommendation(int k){
+    public List<AtrionEntry> recommendation(List<AtrionEntry> list,int k){
         Collections.sort(list);
 
         List<AtrionEntry> sortedList = new ArrayList<AtrionEntry>();
-        for(int i = list.size()-1;i>=0;i--){
+        for(int i = 0;i<list.size();i++){
             sortedList.add(list.get(i));
+            if(i == k-1){
+                break;
+            }
         }
 
         return sortedList;
@@ -39,5 +42,13 @@ public class AtrionRecommendation {
 
     public int getK() {
         return k;
+    }
+
+    @Override
+    public String toString() {
+        return "AtrionRecommendation{" +
+                "list=" + list +
+                ", k=" + k +
+                '}';
     }
 }

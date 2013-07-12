@@ -50,4 +50,15 @@ public class AtrionEntry implements Comparable<AtrionEntry> {
     public int compareTo(AtrionEntry o) {
         return Double.compare(this.totalCost,o.totalCost);
     }
+
+    @Override
+    public String toString() {
+        return "AtrionEntry{" +
+                "objectID=" + objectID +
+                ", point=" + point +
+                ", objectCost=" + objectCost +
+                ", walkingCost=" + walkingCost +
+                ", totalCost=" + totalCost +
+                '}';
+    }
 }

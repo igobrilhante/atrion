@@ -14,6 +14,8 @@ import org.atrion.geometry.Point;
 
 public class PerpendicularEuclideanDistance {
 
+    private Point projectedPoint;
+
     public double invoke(Point point,LineSegment lineSegment){
         EuclideanDistance ed = new EuclideanDistance();
 
@@ -34,18 +36,26 @@ public class PerpendicularEuclideanDistance {
 
             if(d1>d2){
                 distance = d2;
+                this.projectedPoint = p2;
             }
             else{
                 distance = d1;
+                this.projectedPoint = p1;
             }
         }
         else{
             Point pc = interpolate(b, lineSegment);
             distance = ed.invoke(point,pc);
+
+            this.projectedPoint = pc;
         }
 
 
         return distance;
+    }
+
+    public Point getProjectedPoint(){
+        return this.projectedPoint;
     }
 
     private Point interpolate(double a, LineSegment lineSegment){

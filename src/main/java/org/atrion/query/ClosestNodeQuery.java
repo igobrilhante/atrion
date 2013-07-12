@@ -23,7 +23,6 @@ public class ClosestNodeQuery {
     public static Node query(Graph graph,Point point){
 
         double maxDistance = Double.POSITIVE_INFINITY;
-        AStar astar = new AStar();
         EuclideanDistance ed = new EuclideanDistance();
         Node result = null;
 
