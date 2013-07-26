@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="atrion-fortaleza-walking-network:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/atrion_fortaleza_walking_network_jar</output-path>
+    <root id="archive" name="atrion.jar">
+      <element id="module-output" name="atrion" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/lib/trove4j-2.0.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/lib/slf4j-api-1.6.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jsi-1.0.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

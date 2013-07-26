@@ -9,17 +9,17 @@ package org.atrion.algorithm;
  */
 public class CandidatePoint {
 
-    private final double distance;
+    private final double walkingDistance;
     private final Object object;
     private double destinationDistance;
 
-    public CandidatePoint(double distance, Object object) {
-        this.distance = distance;
+    public CandidatePoint(double walkingDistance, Object object) {
+        this.walkingDistance = walkingDistance;
         this.object = object;
     }
 
-    public double getDistance() {
-        return distance;
+    public double getWalkingDistance() {
+        return walkingDistance;
     }
 
     public Object getObject() {
@@ -37,7 +37,7 @@ public class CandidatePoint {
     @Override
     public String toString() {
         return "CandidatePoint{" +
-                "distance=" + distance +
+                "walkingDistance=" + walkingDistance +
                 ", object=" + object +
                 ", destinationDistance=" + destinationDistance +
                 '}';

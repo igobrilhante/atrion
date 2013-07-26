@@ -39,8 +39,11 @@ public class CandidateQuery {
             Find closest edge for destination point
          */
         Map.Entry<Edge,Point> destinationEntry  = ClosestEdgeQuery.query(graph.getEdges(), queryPoint.getDestinationPoint());
-        Edge closestDestinationEdge             = entry.getKey();
-        Point projectedDestinationPoint         = entry.getValue();
+        Edge closestDestinationEdge             = destinationEntry.getKey();
+        Point projectedDestinationPoint         = destinationEntry.getValue();
+        System.out.println("Destination "+destinationEntry);
+        System.out.println(closestDestinationEdge.getSource().getPoint());
+        System.out.println(closestDestinationEdge.getTarget().getPoint());
 
 //        System.out.println("Closest edge: "+closestEdge);
 //        System.out.println("Projected point: "+projectedPoint);
@@ -54,6 +57,7 @@ public class CandidateQuery {
         double targetDistance = ed.invoke(target.getPoint(), projectedPoint);
         
         double projectedDestinationDistance = ed.invoke(projectedDestinationPoint,destinationSource.getPoint());
+        System.out.println("projdes "+projectedDestinationDistance);
 
         Double distance = 0.0;
 
@@ -67,10 +71,15 @@ public class CandidateQuery {
 
             // Destination Distance
             Double dd = roadPaths.getCost(target,destinationSource);
+            System.out.println(dd);
 
-            if(distance !=null) {
-                dd += ed.invoke(projectedPoint,target.getPoint());
-                dd += projectedDestinationDistance;
+            if(dd !=null) {
+                System.out.println(projectedPoint);
+                System.out.println(target.getPoint());
+                dd = dd + ed.invoke(projectedPoint,target.getPoint());
+                System.out.println(dd);
+                dd = dd + projectedDestinationDistance;
+                System.out.println(dd);
                 CandidatePoint defaultPoint = new CandidatePoint(0.0,entry);
                 defaultPoint.setDestinationDistance(dd);
                 candidatePoints.add(defaultPoint);
@@ -79,12 +88,13 @@ public class CandidateQuery {
         }
 
         if( sourceDistance <= queryPoint.getWalkingDistance()){
-//            System.out.println("Source Distance "+source +" is "+sourceDistance);
+            System.out.println("Source Distance "+source +" is "+sourceDistance);
 
             // Destination Distance
             Double dd = roadPaths.getCost(source,destinationSource);
             if(dd != null){
-                dd += projectedDestinationDistance;
+                dd = dd + projectedDestinationDistance;
+                System.out.println("Source dd "+dd);
                 CandidatePoint candidatePoint = new CandidatePoint(sourceDistance,source);
                 candidatePoint.setDestinationDistance(dd);
                 candidatePoints.add(candidatePoint);
@@ -92,13 +102,14 @@ public class CandidateQuery {
 
         }
         if( targetDistance <= queryPoint.getWalkingDistance()){
-//            System.out.println("Target Distance "+target +" is "+targetDistance);
+            System.out.println("Target Distance "+target +" is "+targetDistance);
 
             // Destination Distance
             Double dd = roadPaths.getCost(target,destinationSource);
             if(dd !=null){
                 dd += projectedDestinationDistance;
                 CandidatePoint candidatePoint = new CandidatePoint(targetDistance,target);
+                candidatePoint.setDestinationDistance(dd);
                 candidatePoints.add(candidatePoint);
             }
 
@@ -109,24 +120,27 @@ public class CandidateQuery {
             If there is candidate, it means that from the query point we can reach a node.
             If we cannot reach a node, we do not need to look for other nodes
          */
-        if(candidatePoints.size() > 0){
+        System.out.println(candidatePoints);
+        if(candidatePoints.size() > 1){
 
             for(Node node : graph.getNodes()){
                 /*
                     Source to Node
                  */
-                if(node != source){
+                if(!node.equals(source)){
                     distance = walkingPaths.getCost(source,node);
                     if(distance != null){
                         if(sourceDistance + distance <= queryPoint.getWalkingDistance()){
 
+                            System.out.println("Node "+node.getId());
                             // Destination Distance
                             Double dd = roadPaths.getCost(node,destinationSource);
                             if(dd != null){
                                 dd += projectedDestinationDistance;
                                 CandidatePoint candidatePoint = new CandidatePoint(sourceDistance + distance,node);
-                                candidatePoints.add(candidatePoint);
                                 candidatePoint.setDestinationDistance(dd);
+                                candidatePoints.add(candidatePoint);
+                                System.out.println("\tok");
                                 continue;
                             }
 
@@ -138,17 +152,20 @@ public class CandidateQuery {
                 /*
                     Target to Node
                  */
-                if(node != target){
+                if(!node.equals(target)){
                     distance = walkingPaths.getCost(target,node);
                     if(distance !=null){
                         if(targetDistance + distance <= queryPoint.getWalkingDistance()){
+
+                            System.out.println("Node "+node.getId());
                             // Destination Distance
                             Double dd = roadPaths.getCost(node,destinationSource);
                             if(dd != null){
                                 dd += projectedDestinationDistance;
                                 CandidatePoint candidatePoint = new CandidatePoint(targetDistance + distance,node);
-                                candidatePoints.add(candidatePoint);
                                 candidatePoint.setDestinationDistance(dd);
+                                candidatePoints.add(candidatePoint);
+                                System.out.println("\tok");
                             }
 
                         }

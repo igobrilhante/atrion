@@ -101,15 +101,85 @@ public class GraphReader {
 
             Integer source     =  Integer.parseInt(l[0]);
 
-            Node nSource = new Node(source);
+            Node nSource = graph.getNode(source);
+            if(nSource == null){
+                throw new IOException("Node "+source+" does not exist");
+            }
 
             Integer target     =  Integer.parseInt(l[1]);
             Float   cost       =  Float.parseFloat(l[2]);
 
-            Node nTarget  = new Node(target);
+            Node nTarget  = graph.getNode(target);
+            if(nTarget == null){
+                throw new IOException("Node "+source+" does not exist");
+            }
 
             Edge edge  =  new Edge(nSource,nTarget,cost);
             graph.addEdge(edge);
+        }
+
+        return graph;
+    }
+
+    /**
+     * Direction attribute is the last attribute in the file
+     * @param nodeFile
+     * @param edgeFile
+     * @return
+     * @throws IOException
+     */
+    public static Graph readFromCSVWithDirection(String nodeFile,String edgeFile,String delim) throws IOException {
+
+        Graph graph = new Graph();
+
+        BufferedReader br = new BufferedReader(new FileReader(new File(nodeFile)));
+
+        String line = "";
+        while((line = br.readLine())!=null){
+            String[] l = line.split(delim);
+
+            Integer nodeId  = Integer.parseInt(l[0]);
+            Double x = Double.parseDouble(l[1]);
+            Double y= Double.parseDouble(l[2]);
+
+            Node node = new Node(nodeId);
+            Point point = new Point(x,y);
+
+            node.setPoint(point);
+            graph.addNode(node);
+        }
+        br.close();
+
+        br = new BufferedReader(new FileReader(new File(edgeFile)));
+
+        line = "";
+        while((line = br.readLine())!=null){
+            String[] l = line.split(delim);
+
+            Integer source     =  Integer.parseInt(l[0]);
+
+            Node nSource = graph.getNode(source);
+            if(nSource == null){
+                throw new IOException("Node "+source+" does not exist");
+            }
+
+            Integer target     =  Integer.parseInt(l[1]);
+            Float   cost       =  Float.parseFloat(l[2]);
+
+            String  directed = l[3];
+
+            Node nTarget  = graph.getNode(target);
+            if(nTarget == null){
+                throw new IOException("Node "+source+" does not exist");
+            }
+
+            Edge edge  =  new Edge(nSource,nTarget,cost);
+            graph.addEdge(edge);
+
+            if(directed.equalsIgnoreCase("f")){
+                Edge edge2  =  new Edge(nTarget,nSource,cost);
+                graph.addEdge(edge2);
+            }
         }
 
         return graph;

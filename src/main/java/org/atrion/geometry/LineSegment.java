@@ -1,5 +1,6 @@
 package org.atrion.geometry;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -9,7 +10,7 @@ import java.util.ArrayList;
  * Time: 11:58
  * To change this template use File | Settings | File Templates.
  */
-public class LineSegment {
+public class LineSegment implements Serializable {
     private final Point point1;
     private final Point point2;
 //    private final float[] equation;

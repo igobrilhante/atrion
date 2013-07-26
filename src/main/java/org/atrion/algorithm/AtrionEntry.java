@@ -1,5 +1,6 @@
 package org.atrion.algorithm;
 
+import org.atrion.entity.MovingObject;
 import org.atrion.geometry.Point;
 
 /**
@@ -11,14 +12,14 @@ import org.atrion.geometry.Point;
  */
 public class AtrionEntry implements Comparable<AtrionEntry> {
 
-    private final int objectID;
+    private final MovingObject movingObject;
     private final CandidatePoint point;
     private final double objectCost;
     private final double walkingCost;
     private final double totalCost;
 
-    public AtrionEntry(int objectID, CandidatePoint point, double objectCost, double walkingCost, double totalCost) {
-        this.objectID = objectID;
+    public AtrionEntry(MovingObject movingObject, CandidatePoint point, double objectCost, double walkingCost, double totalCost) {
+        this.movingObject = movingObject;
         this.point = point;
         this.objectCost = objectCost;
         this.walkingCost = walkingCost;
@@ -29,8 +30,8 @@ public class AtrionEntry implements Comparable<AtrionEntry> {
         return point;
     }
 
-    public int getObjectID() {
-        return objectID;
+    public MovingObject getMovingObject() {
+        return movingObject;
     }
 
     public double getObjectCost() {
@@ -54,7 +55,7 @@ public class AtrionEntry implements Comparable<AtrionEntry> {
     @Override
     public String toString() {
         return "AtrionEntry{" +
-                "objectID=" + objectID +
+                "movingObject=" + movingObject +
                 ", point=" + point +
                 ", objectCost=" + objectCost +
                 ", walkingCost=" + walkingCost +

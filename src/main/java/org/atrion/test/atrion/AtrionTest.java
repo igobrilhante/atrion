@@ -5,6 +5,7 @@ import org.atrion.algorithm.AtrionQuery;
 import org.atrion.algorithm.AtrionRecommendation;
 import org.atrion.algorithm.CandidatePoint;
 import org.atrion.astar.PathCollection;
+import org.atrion.entity.MovingObject;
 import org.atrion.geometry.Point;
 import org.atrion.graph.Graph;
 import org.atrion.graph.io.GraphReader;
@@ -32,8 +33,9 @@ public class AtrionTest {
 
         Graph walkingGraph = GraphReader.readFromCSV(nodeFile, edgeFile);
 
-        System.out.println(walkingGraph.nodeCount());
-        System.out.println(walkingGraph.edgeCount());
+        System.out.println("Walking Networks:");
+        System.out.println("\tNodes: "+walkingGraph.nodeCount());
+        System.out.println("\tEdges: "+walkingGraph.edgeCount());
 
         PathCollection walkingPaths = PathCollection.read("walking-path-collection.ser");
 
@@ -43,20 +45,26 @@ public class AtrionTest {
         String roadNodeFile = "road-network-nodes.txt";
         String roadEdgeFile = "road-network-edges.txt";
 
-        Graph roadGraph = GraphReader.readFromCSV(roadNodeFile, roadEdgeFile);
+        Graph roadGraph = GraphReader.readFromCSVWithDirection(roadNodeFile, roadEdgeFile, ",");
 
-        System.out.println(walkingGraph.nodeCount());
-        System.out.println(walkingGraph.edgeCount());
+        System.out.println("Road Networks:");
+        System.out.println("\tNodes: "+roadGraph.nodeCount());
+        System.out.println("\tEdges: "+roadGraph.edgeCount());
 
         PathCollection roadPaths = PathCollection.read("path-collection.ser");
 
-        AtrionQuery queryPoint = new AtrionQuery(new Point(3.0,2.0),1);
+        AtrionQuery queryPoint = new AtrionQuery(new Point(3.0,2.0),2);
+        queryPoint.setDestinationPoint(new Point(4,1));
 
         Atrion atrion = new Atrion();
 
-        Collection<Point> taxis = new HashSet<Point>();
-        taxis.add(new Point(2,0));
-        taxis.add(new Point(1,1));
+        Collection<MovingObject> taxis = new HashSet<MovingObject>();
+        MovingObject taxi1 = new MovingObject();
+        taxi1.setPoint(new Point(2,0));
+        MovingObject taxi2 = new MovingObject();
+        taxi2.setPoint(new Point(1,1));
+
+        taxis.add(taxi1);taxis.add(taxi2);
 
         AtrionRecommendation ar = atrion.execute(queryPoint,taxis,roadGraph,walkingGraph,roadPaths,walkingPaths,3);
 

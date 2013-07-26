@@ -27,7 +27,7 @@ public class RoadPathCollectionTest {
         String nodeFile = "road-network-nodes.txt";
         String edgeFile = "road-network-edges.txt";
 
-        Graph graph = GraphReader.readFromCSV(nodeFile, edgeFile);
+        Graph graph = GraphReader.readFromCSVWithDirection(nodeFile, edgeFile,",");
 
         System.out.println(graph.nodeCount());
         System.out.println(graph.edgeCount());
@@ -55,6 +55,6 @@ public class RoadPathCollectionTest {
 
         pathCollection = PathCollection.read("path-collection.ser");
         System.out.println("Paths " + pathCollection.getMap().size());
-        System.out.println(pathCollection.getPath(graph.getNode(2),graph.getNode(5)));
+        System.out.println(pathCollection.getPath(graph.getNode(1),graph.getNode(6)));
     }
 }
