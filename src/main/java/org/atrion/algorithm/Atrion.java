@@ -1,12 +1,15 @@
 package org.atrion.algorithm;
 
+import org.atrion.astar.AStar;
 import org.atrion.astar.PathCollection;
 import org.atrion.distance.EuclideanDistance;
+import org.atrion.distance.Util;
 import org.atrion.entity.MovingObject;
 import org.atrion.geometry.Point;
 import org.atrion.graph.Edge;
 import org.atrion.graph.Graph;
 import org.atrion.graph.Node;
+import org.atrion.index.SpatialIndex;
 import org.atrion.query.CandidateQuery;
 import org.atrion.query.ClosestEdgeQuery;
 
@@ -24,10 +27,17 @@ import java.util.Map;
  */
 public class Atrion {
 
-    private static final double CAR_SPEED     = 3.0;
-    private static final double WALKING_SPEED = 1.0;
+    private static final double CAR_SPEED     = 8.33;   // m/s
+    private static final double WALKING_SPEED = 0.2777; // m/s
+    private SpatialIndex index;
 
-    public AtrionRecommendation execute(AtrionQuery query,Collection<MovingObject> movingObjects,Graph roadGraph, Graph walkingGraph,PathCollection roadPaths, PathCollection walkingPaths,final int k) throws Exception {
+    public void init(SpatialIndex index){
+        this.index = index;
+    }
+
+    public AtrionRecommendation execute(AtrionQuery query,Collection<MovingObject> movingObjects,Graph roadGraph, Graph walkingGraph,final int k) throws Exception {
+
+        AStar astar =new AStar();
 
         /*
             Result
@@ -36,9 +46,9 @@ public class Atrion {
         /*
             Find cadidate points
          */
-        Collection<CandidatePoint> candidatePoints = CandidateQuery.query(walkingGraph,walkingPaths,roadPaths,query);
-        System.out.println("Candidate Points "+candidatePoints);
-        System.out.println("Candidate Points "+candidatePoints.size());
+//        System.out.println("Looking for Candidate Points");
+        Collection<CandidatePoint> candidatePoints = CandidateQuery.query(index,walkingGraph,roadGraph,query);
+//        System.out.println("Candidate Points "+candidatePoints.size());
         /*
             Search for close movingObjects
          */
@@ -46,19 +56,20 @@ public class Atrion {
         EuclideanDistance  ed  = new EuclideanDistance();
 
         int objectId = 0;
+//        System.out.println("Looking for Moving Object");
          for(MovingObject movingObject : movingObjects){
-             System.out.println("##############################");
-             System.out.println("Taxi "+movingObject);
-             Map.Entry<Edge,Point> projection = ClosestEdgeQuery.query(roadGraph.getEdges(),movingObject.getPoint());
-
+//             System.out.println("##############################");
+//             System.out.println("Taxi "+movingObject);
+//             Map.Entry<Edge,Point> projection = ClosestEdgeQuery.query(roadGraph.getEdges(),movingObject.getPoint());
+             Map.Entry<Edge,Point> projection = index.nearestEdge(movingObject.getPoint());
              Edge movingObjectEdge              = projection.getKey();
              Point movingObjectprojectedPoint   = projection.getValue();
 
-             System.out.println("From: " + movingObjectEdge.getTarget());
+//             System.out.println("From: " + movingObjectEdge.getTarget());
 
              for(CandidatePoint candidatePoint : candidatePoints){
-                 System.out.println("--------------------------");
-                 System.out.println("\tTo: "+candidatePoint.getObject());
+//                 System.out.println("--------------------------");
+//                 System.out.println("\tTo: "+candidatePoint.getObject());
                  // Distance is the distance of the moving object to reach the candidate point
                  Double distance = null;
                  Object obj = candidatePoint.getObject();
@@ -70,10 +81,18 @@ public class Atrion {
 
                      // Distance from the moving object (TARGET NODE) to the point (SOURCE)
                      // Moving object can reach the Point
-                     distance = roadPaths.getCost(movingObjectEdge.getTarget(),edge.getSource());
+//                     distance = roadPaths.getCost(movingObjectEdge.getTarget(),edge.getSource());
+                     astar.distance(roadGraph,movingObjectEdge.getTarget(),edge.getSource());
+                     distance = astar.getPath().getTotalCost();
+                     if(distance < 0){
+                         distance = null;
+                     }
                      if(distance != null){
-                        distance += ed.invoke(movingObjectprojectedPoint,movingObjectEdge.getTarget().getPoint());
-                        distance += ed.invoke(edge.getTarget().getPoint(),projectedPoint);
+                        distance += Util.degree2meters(ed.invoke(movingObjectprojectedPoint, movingObjectEdge.getTarget().getPoint()));
+                        distance += Util.degree2meters(ed.invoke(edge.getTarget().getPoint(), projectedPoint));
+                     }
+                     else{
+                         continue;
                      }
 
                  }
@@ -81,14 +100,16 @@ public class Atrion {
                      if(candidatePoint.getObject() instanceof Node){
                          Node node = (Node)candidatePoint.getObject();
 
-                         distance = roadPaths.getCost(movingObjectEdge.getTarget(),node);
-                         System.out.println("Path from "+movingObjectEdge.getTarget().getId()+" to "+node.getId()+" is "+distance);
-
+//                         distance = roadPaths.getCost(movingObjectEdge.getTarget(),node);
+                         astar.distance(roadGraph,movingObjectEdge.getTarget(),node);
+                         distance = astar.getPath().getTotalCost();
+//                         System.out.println("\tPath from "+movingObjectEdge.getTarget().getId()+" to "+node.getId()+" is "+distance);
+//                         System.out.println("\t"+astar.getPath());
                          if(distance != null){
-                             distance += ed.invoke(movingObjectEdge.getTarget().getPoint(),movingObjectprojectedPoint);
+                             distance += Util.degree2meters(ed.invoke(movingObjectEdge.getTarget().getPoint(), movingObjectprojectedPoint));
                          }
                          else{
-                             System.out.println("Path from "+movingObjectEdge.getTarget().getId()+" to "+node.getId()+" do not exit");
+//                             System.out.println("\tPath from "+movingObjectEdge.getTarget().getId()+" to "+node.getId()+" do not exit");
                              continue;
                          }
 
@@ -99,20 +120,20 @@ public class Atrion {
                  }
 
                  // Cost of the moving object to reach the candidate point
-                 double objectCost  = distance                                              / CAR_SPEED;
+                 double objectCost  = distance                           / CAR_SPEED;
                  // Cost of the person to reach the candidate point
                  double walkingCost = candidatePoint.getWalkingDistance()                   / WALKING_SPEED;
                  // Total cost of the trip:
                  //                         Cost of the moving object to reach the candidate point +
                  //                         Cost of the moving object to reach the destination
-                 double totalCost   = (distance+candidatePoint.getDestinationDistance())    / CAR_SPEED;
+                 double totalCost   = (distance +  candidatePoint.getDestinationDistance())    / CAR_SPEED;
 
-                 System.out.println("\tTaxi Cost "+objectCost);
-                 System.out.println("\tWalking Cost "+walkingCost);
-                 System.out.println("\tTotal Cost "+totalCost);
+//                 System.out.println("\tTaxi Cost "+objectCost);
+//                 System.out.println("\tWalking Cost "+walkingCost);
+//                 System.out.println("\tTotal Cost "+totalCost);
 
                  if(objectCost > walkingCost){
-                     System.out.println("\tValid Solution");
+//                     System.out.println("\tValid Solution");
                      AtrionEntry entry = new AtrionEntry(movingObject,candidatePoint,objectCost,walkingCost,totalCost);
                      tentativeSolution.add(entry);
                  }

@@ -9,6 +9,7 @@ import org.atrion.geometry.Point;
 import org.atrion.graph.Graph;
 import org.atrion.graph.Node;
 import org.atrion.graph.io.GraphReader;
+import org.atrion.index.SpatialIndex;
 import org.atrion.query.CandidateQuery;
 
 import java.io.IOException;
@@ -49,10 +50,13 @@ public class CandidateQueryTest {
 
         PathCollection roadPaths = PathCollection.read("path-collection.ser");
 
-        AtrionQuery queryPoint = new AtrionQuery(new Point(1,1.0),3);
+        AtrionQuery queryPoint = new AtrionQuery(new Point(1,1.0),2);
         queryPoint.setDestinationPoint(new Point(4,1));
 
-        Collection<CandidatePoint> candidatePointCollection = CandidateQuery.query(graph,pathCollection,roadPaths,queryPoint);
+        SpatialIndex si = new SpatialIndex();
+        si.init(graph);
+
+        Collection<CandidatePoint> candidatePointCollection = CandidateQuery.query(si,graph,roadGraph,queryPoint);
 
         System.out.println("Result:\n"+candidatePointCollection);
     }

@@ -11,20 +11,30 @@ import org.atrion.geometry.Point;
  */
 public class AtrionQuery {
 
-    private final Point point;
+    private Point point;
     private Point destinationPoint;
-    private final int   walkingDistance;
+    private float   walkingDistance;
 
-    public AtrionQuery(Point point, int walkingDistance) {
+    public AtrionQuery(){}
+
+    public AtrionQuery(Point point, float walkingDistance) {
         this.point              = point;
         this.walkingDistance    = walkingDistance;
+    }
+
+    public void setPoint(Point point) {
+        this.point = point;
+    }
+
+    public void setWalkingDistance(float walkingDistance) {
+        this.walkingDistance = walkingDistance;
     }
 
     public Point getPoint() {
         return point;
     }
 
-    public int getWalkingDistance() {
+    public float getWalkingDistance() {
         return walkingDistance;
     }
 
